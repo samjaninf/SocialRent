@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const BusinessSchema = new Schema({
+const businessSchema = new Schema({
   name: {
     type: String,
     required: true
@@ -18,10 +18,6 @@ const BusinessSchema = new Schema({
     type: String,
     required: true
   },
-  about: {
-    type: String,
-    required: true
-  },
   campaigns: [
     {
       type: Schema.Types.ObjectId,
@@ -30,6 +26,6 @@ const BusinessSchema = new Schema({
   ]
 })
 
-let Business = mongoose.model('Business', BusinessSchema)
+let Business = mongoose.model('Business', businessSchema)
 
 module.exports = Business

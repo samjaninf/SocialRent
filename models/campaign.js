@@ -26,7 +26,7 @@ const CampaignSchema = new Schema({
       },
       message: "Your campaign cannot start in the past."
     }
-  },
+  }
   endDate: {
     type: Date,
     required: true,
@@ -36,10 +36,10 @@ const CampaignSchema = new Schema({
       },
       message: "End date must be after start date."
     }
-  },
+  }
   users: [
     {
-      type: Schema.Types.ObjectId,
+      type: Schema.types.ObjectId,
       ref: 'User'
     }
   ]
