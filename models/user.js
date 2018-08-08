@@ -54,6 +54,7 @@ UserSchema.set('toJSON', {
   transform: function(doc, json) {
     return {
       id: json._id,
+      handle: json.handle,
       email: json.email,
     }
   }
